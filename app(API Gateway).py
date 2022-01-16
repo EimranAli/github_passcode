@@ -15,7 +15,7 @@ password = ''
 database_name = ''
 
 # connect to the database using connection parameters above.
-# note : below syntax is for pymysql version 1.0.2. If this doesnt work in your code , check pymysql version you are using.
+# note : below syntax is for pymysql version 1.0.2. If this doesn't work in your code , check your pymysql version.
 connection = pymysql.connect(host=endpoint, user=username, password=password, db=database_name)
 
 def lambda_handler(event, context):
