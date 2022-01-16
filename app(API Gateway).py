@@ -1,7 +1,7 @@
-# datbase related
+# to query database
 import pymysql
 
-# selenium related
+# selenium library
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
