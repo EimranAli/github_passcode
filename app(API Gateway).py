@@ -221,8 +221,8 @@ def lambda_handler(event, context):
     connection.close()
 
     # the below message won't be returned when calling lambda using api-gateway.
-    # api-gateway's max limit to getting a response from any service is 30 seconds 
-    # and the code won't reach this point in 30 seconds.
+    # api-gateway's max limit to getting a response from any service is 29 seconds 
+    # and the code won't reach this point in 29 seconds.
 
     # when we invoke this function using api-gateway without passing 'mode' 
     # parameter(which is used to poll for the latest code present in the database), time taken 
