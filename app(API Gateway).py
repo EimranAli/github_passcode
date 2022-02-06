@@ -1,7 +1,10 @@
-# to query database
+# datbase related
 import pymysql
 
-# selenium library
+# api-gateway related
+import json
+
+# selenium related
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -33,8 +36,13 @@ def lambda_handler(event, context):
     if event['queryStringParameters']['mode'] == 'poll' :
         # close the cursor,connection and return the verification code present in the database
         cursor.close()
-        connection.close()
-        return "Your latest GitHub verification code is : " + verification_code[0][0]
+        # closing connection was throwing interface error, so commented it out.
+        # connection.close()
+        # when dealing with api-gateway , response must be sent in json format, else internal server error shows up
+        return  {
+        'statusCode': 200,
+        'body': json.dumps("Your latest GitHub verification code is : " + verification_code[0][0])
+        }
 
     # ----------------------------------web driver setup---------------------------------------------------
     # path to chromedriver. while testing locally, 'var/task/' is the temporary path where files and dependencies of the function are mounted.
@@ -218,7 +226,8 @@ def lambda_handler(event, context):
 
     # close the cursor and connection
     cursor.close()
-    connection.close()
+    # closing connection was throwing interface error, so commented it out.
+    # connection.close()
 
     # the below message won't be returned when calling lambda using api-gateway.
     # api-gateway's max limit to getting a response from any service is 29 seconds 
