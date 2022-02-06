@@ -115,7 +115,7 @@ def lambda_handler(event, context):
     # find and click signin
     driver.find_element(By.XPATH, signin_button_abs_xpath).click()
 
-    # store email account creds in a variable for testing
+    # store email account credentials in variables for testing
     # use your outlook username
     email = ""
     # use your outlook password
