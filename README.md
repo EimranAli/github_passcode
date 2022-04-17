@@ -14,6 +14,6 @@ AWS Lambda
 Python 3.7   
 SAM CLI    
    
-*Detailed explanation of this project is present at* [***Web Automation using Selenium with headless-chromium on AWS Lambda***](https://imranali.hashnode.dev/web-automation-using-selenium-with-headless-chromium-on-aws-lambda).
+***For detailed explanation of this project, visit*** [***Web Automation using Selenium with headless-chromium on AWS Lambda***](https://imranali.hashnode.dev/web-automation-using-selenium-with-headless-chromium-on-aws-lambda).
 
 
