@@ -1,6 +1,6 @@
 **All about the Project** :    
 Core intent of this project is to automate web tasks using selenium framework.    
-For higher availability of the automation logic, it will be deployed on AWS Lambda. 
+For higher availability of automation logic, it can be deployed on AWS Lambda. 
     
     
 **Task accomplished** :    
